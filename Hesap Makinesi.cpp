@@ -11,15 +11,15 @@ int main()
     {
 
     a:
-        cout << "1. sayýyý giriniz:";cin >> n1;
-        cout << "2. sayýyý giriniz:";cin >> n2;
-        cout << "1=Toplama" << endl;
-        cout << "2=Çýkarma" << endl;
-        cout << "3=Çarpma" << endl;
-        cout << "4=Bölme" << endl;
+        cout << "Please enter the first value:";cin >> n1;
+        cout << "And second value:";cin >> n2;
+        cout << "1=Addition" << endl;
+        cout << "2=Subtraction" << endl;
+        cout << "3=Multiplication" << endl;
+        cout << "4=Division" << endl;
     b:
 
-        cout << "Ne yapmak istiyorsunuz?";cin >> cont;
+        cout << "What do you want to do?";cin >> cont;
         if (cont == 1)
         {
             cout << n1 << "+" << n2 << "=" << n1 + n2 << endl;
@@ -36,20 +36,20 @@ int main()
         {
             if (n2 == 0)
             {
-                cout << "0a bölünemez" << endl;
+                cout << "Can't divide by zero" << endl;
                 goto a;
             }
             cout << n1 << "/" << n2 << "=" << n1 / n2 << endl;
         }
         else
         {
-            cout << "Lütfen belirtilen deðerlerden birini giriniz." << endl;
+            cout << "Please enter one of the specified values." << endl;
             goto b;
         }
-        cout << "Devam etmek istiyor musunuz? 1/0?" << endl;
+        cout << "Would you like to do another operation? 1/0?" << endl;
         cin >> ch;
 
 
     } while (ch == 1);
-    cout << "Elveda..." << endl;
+    cout << "Goodbye..." << endl;
 }
