@@ -1,18 +1,18 @@
 #include <iostream>
-#include<locale.h>
+
 
 using namespace std;
 int main()
 {
-    setlocale(LC_ALL, "Turkish");
+
     double n1, n2, cont;
-    int ch;
+    string ch;
     do
     {
 
     a:
         cout << "Please enter the first value:";cin >> n1;
-        cout << "And second value:";cin >> n2;
+        cout << "And the second value:";cin >> n2;
         cout << "1=Addition" << endl;
         cout << "2=Subtraction" << endl;
         cout << "3=Multiplication" << endl;
@@ -46,10 +46,16 @@ int main()
             cout << "Please enter one of the specified values." << endl;
             goto b;
         }
-        cout << "Would you like to do another operation? 1/0?" << endl;
+        cout << "Would you like to do another operation? y/n?" << endl;
+        c:
         cin >> ch;
+        if (ch!="y" && ch!="n" && ch != "Y" && ch != "N")
+        {
+            cout << "Come on, I am just a calculator. Please enter y or n" << endl;
+                goto c;
+        }
 
 
-    } while (ch == 1);
+    } while (ch == "y" || ch== "Y");
     cout << "Goodbye..." << endl;
 }
